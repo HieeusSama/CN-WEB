@@ -18,7 +18,7 @@ class ComputersSeeder extends Seeder
 
         foreach (range(1, 50) as $index) {
             DB::table("computers")->insert([
-                'computer_name' => $faker-> randomElement(['MSI','Macbook', 'Skibidi']),
+                'computer_name' => $faker-> word(),
                 'model'  => $faker->sentence(2),
                 'operating_system' => $faker->randomElement(['Windows 10','Windows 11', 'Windows 12']),
                 'processor' => $faker->sentence(2),
